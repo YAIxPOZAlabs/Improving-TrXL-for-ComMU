@@ -49,6 +49,18 @@ class ProjectedAdaptiveLogSoftmax(nn.Module):
             logit = F.linear(proj_hid, weight, bias=bias)
 
         return logit
+   
+    def label_smoothing(self, logit, target):
+        # velocity : 131~194
+        # duration : 304~431
+        # position : 432~559
+        i = ((target >= 133) & (target <= 192)) | ((target >= 306) & (target <= 429)) | (
+                    (target >= 434) & (target <= 557))
+        idx = i.nonzero().squeeze()
+        tmp = target[idx]
+        ret = torch.empty_like(logit).copy_(logit)
+        ret[idx, tmp] = logit[idx, tmp - 1] * 0.1 + logit[idx, tmp] * 0.8 + logit[idx, tmp + 1] * 0.1
+        return ret
 
     def forward(self, hidden, target, keep_order=False):
         """
@@ -68,9 +80,16 @@ class ProjectedAdaptiveLogSoftmax(nn.Module):
                 self.out_layers[0].bias,
                 self.out_projs[0],
             )
+            pred = F.softmax(logit, dim=-1)
+            pred = -torch.log(self.label_smoothing(pred, target))
+            nll = (
+                pred.gather(1, target.unsqueeze(1)).squeeze(1)
+            )
+            '''
             nll = (
                 -F.log_softmax(logit, dim=-1).gather(1, target.unsqueeze(1)).squeeze(1)
             )
+            '''
         else:
             # construct weights and biases
             weights, biases = [], []
