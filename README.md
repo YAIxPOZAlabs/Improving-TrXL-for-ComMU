@@ -62,13 +62,14 @@ https://github.com/POZAlabs/ComMU-code
 
 <br>
 
-## Metrics (수정중) - 요런 느낌으로 갈 예정
+## Metrics
 To evaluate generation models we have to generate data with trained models and depending on what metrics we want to use, the generation proccess differ. 
 Please refer to the explanations below to generate certain samples needed for evaluation.
 
 
 ### Classification Accuracy Score
 <img width="80%" src="https://user-images.githubusercontent.com/73946308/225903685-b8680fe4-4c31-4456-88d0-501cbb1d509a.png"/>
+
 
 - To compute Classicication Accuracy Score of Generated Music conditioned with certain meta data 
 
