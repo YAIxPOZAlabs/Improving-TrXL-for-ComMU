@@ -48,7 +48,7 @@ NLP model for music generation <br>
 ## 0. Baseline (Transformer-XL)
  Transformer-XL: Attentive Language Models Beyond a Fixed-Length Context
 
-## 1. Group Encoding
+## 1. Group Encoding - [Link](https://github.com/YAIxPOZAlabs/Generation/tree/master/Group_Encoding)
 For a vanila transformer-XL model, it inputs tokens in a 1d sequence and adds Positional Encoding to give the model information about the position between tokens. In this setting, the model learns about the semantics of the data as well as the structure of the MIDI data. However, as there is a explicit pattern when encoding MIDI data in to sequence of tokens, we propose a Group Encoding method that gives an inductive bias about the explicit structure of the sequence data
  to the model. 
  
@@ -70,10 +70,10 @@ https://user-images.githubusercontent.com/68505714/225961723-93262632-abc2-41d0-
 
 
 
-## 2. Soft Labeling
+## 2. Soft Labeling - [Link](https://github.com/YAIxPOZAlabs/Generation/tree/master/Soft_Labeling)
 To prevent overfitting of the model, techniques such as soft labeling are often used. We apply soft labeling on velocity, duration, and position information, so it can be flexibly predicted. For example, if the target of the token value is 300, the logit is reconstructed by referring to the logit value of the 298/299/301/302 token. As a result of using soft labeling, we confirm that the token appears more flexible than baseline.
 
-## 3. Gated Transformer-XL
+## 3. Gated Transformer-XL - [Link](https://github.com/YAIxPOZAlabs/Generation/tree/master/Gated_Transformer-XL)
 
 <br>
 
@@ -90,7 +90,7 @@ To evaluate generation models we have to generate data with trained models and d
 Please refer to the explanations below to generate certain samples needed for evaluation.
 
 
-### Classification Accuracy Score
+### Classification Accuracy Score - [Link](https://github.com/YAIxPOZAlabs/Generation/tree/master/CAS)
 <img width="80%" src="https://user-images.githubusercontent.com/73946308/225903685-b8680fe4-4c31-4456-88d0-501cbb1d509a.png"/>
 
 
