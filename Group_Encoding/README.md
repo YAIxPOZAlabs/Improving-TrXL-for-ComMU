@@ -1,6 +1,6 @@
 # Group Encoding for ComMU: Dataset for Combinatorial Music Generation
 
-### [Link](https://github.com/POZAlabs/ComMU-code)
+### [Notion](https://www.notion.so/binne/Group_Encoding-3327efecd89b47f9a44bdcd97ba4b347?pvs=4)
   
 ## Group Encoding 
 
