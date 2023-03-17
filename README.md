@@ -53,10 +53,13 @@ For a vanila transformer-XL model, it inputs tokens in a 1d sequence and adds Po
 
 
 <p align="center">
-<img width="500" src="https://user-images.githubusercontent.com/68505714/225891370-6de30c11-446a-44c4-885f-8896b9a0aa2b.png" alt="group">
+<!--<img width="500" src="https://user-images.githubusercontent.com/68505714/225891370-6de30c11-446a-44c4-885f-8896b9a0aa2b.png" alt="group">-->
 </p>
 
 
+<p align="center">
+<img width="500" alt="GE" src="https://user-images.githubusercontent.com/73946308/225978762-90ec5154-4344-4e04-9a0d-caeb2042edd5.png">
+</p>
 
 <p align="center">
 <img width="800" alt="Encoding" src="https://user-images.githubusercontent.com/68505714/225891056-73ca56ca-ea98-4fb1-b459-f7820bde9f98.png">
