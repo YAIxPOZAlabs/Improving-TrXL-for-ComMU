@@ -56,6 +56,7 @@ def save_checkpoint(
 
 def parse_args():
     parser = argparse.ArgumentParser(description="PyTorch Transformer Language Model")
+    parser.add_argument("--soft_argument", type=list, default=[0, 0.15, 0.7, 0.15, 0])
     parser.add_argument(
         "--data_dir", type=str, required=True, help="location of the data corpus"
     )
