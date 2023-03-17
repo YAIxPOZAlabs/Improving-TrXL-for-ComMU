@@ -3,7 +3,7 @@
 <p align="center"><a href="#">
     <img width="100%" height="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:B993D6,100:8CA6DB&height=220&section=header&fontSize=40&fontColor=ffffff&animation=fadeIn&fontAlignY=40&text=Improving%20Transformer-XL" alt="header" />
 </a></p>
-%20<h3 align="center">Improving Transformer-XL for Music Generation</h3>
+<h3 align="center">Improving Transformer-XL for Music Generation</h3>
 <p align="center"><a href="https://github.com/YAIxPOZAlabs"><img src="assets/figure00_logo.png" width=50% height=50% alt="logo"></a></p>
 <p align="center">This project was carried out by <b><a href="https://github.com/yonsei-YAI">YAI 11th</a></b>, in cooperation with <b><a href="https://github.com/POZAlabs">POZAlabs</a></b>.</p>
 <p align="center">
@@ -75,12 +75,17 @@ Please refer to the explanations below to generate certain samples needed for ev
 
 to generate samples, run
 ```
-$python generate_CAS.py --checkpoint {./model_checkpoint} --meta_data {./meta_data.csv}
+$python generate_CAS.py --checkpoint_dir {./model_checkpoint} --meta_data {./meta_data.csv}
 ```
-to compute CAS, run
+to compute CAS for certain meta data as label, run
 ```
-$ python compute_CAS.py --data_dir {./data} --meta_name {KEY}
+$ python compute_CAS.py --midi_dir {./data.npy} --meta_dir {./meta.npy} --meta_num {meta_num}
 ```
+to compute CAS for all meta data as label, run
+```
+$ python compute_CAS_all.py --midi_dir {./data.npy} --meta_dir {./meta.npy}
+```
+
 
 ### Diversity
 - To compute the Diversity of Generated Music conditioned with certain meta data
