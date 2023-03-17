@@ -50,7 +50,7 @@ For a vanila transformer-XL model, it inputs tokens in a 1d sequence and adds Po
  to the model. 
  
 ## 2. Soft Labeling
-
+To prevent overfitting of the model, techniques such as soft labeling are often used. We apply soft labeling on velocity, duration, and position information, so it can be flexibly predicted. For example, if the target of the token value is 300, the logit is reconstructed by referring to the logit value of the 298/299/301/302 token. As a result of using soft labeling, we confirm that the token appears more flexible than baseline.
 
 ## 3. Gated Transformer-XL
 
