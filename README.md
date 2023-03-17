@@ -57,10 +57,6 @@ For a vanila transformer-XL model, it inputs tokens in a 1d sequence and adds Po
 </p>
 
 <p align="center">
-<img width="400" alt="EncodedMidi" src="https://user-images.githubusercontent.com/68505714/225893462-4f81990d-d79f-47ef-860c-f6cfb2e46336.png">
-</p>
-
-<p align="center">
 <img width="800" alt="Encoding" src="https://user-images.githubusercontent.com/68505714/225891056-73ca56ca-ea98-4fb1-b459-f7820bde9f98.png">
 </p>
 
