@@ -1,4 +1,20 @@
-# Group Encoding for [ComMU: Dataset for Combinatorial Music Generation](https://github.com/POZAlabs/ComMU-code)
+# Group Encoding for ComMU: Dataset for Combinatorial Music Generation
+
+### [Link](https://github.com/POZAlabs/ComMU-code)
+  
+## Group Encoding 
+
+<p align="center">
+<img width="600" alt="group" src="https://user-images.githubusercontent.com/68505714/225891370-6de30c11-446a-44c4-885f-8896b9a0aa2b.png">
+</p>
+
+<p align="center">
+<img width="400" alt="EncodedMidi" src="https://user-images.githubusercontent.com/68505714/225893462-4f81990d-d79f-47ef-860c-f6cfb2e46336.png">
+</p>
+
+<p align="center">
+<img width="1600" alt="Encoding" src="https://user-images.githubusercontent.com/68505714/225891056-73ca56ca-ea98-4fb1-b459-f7820bde9f98.png">
+</p>
 
 ## Getting Started
 - Note : This Project requires python version `3.8.12`. Set the virtual environment if needed.
@@ -50,7 +66,7 @@ python3 generate.py \
 
 ## Checkpoint File
 This is our model(group encoding)'s checkpoint!
-[<Download>](https://drive.google.com/file/d/1pqyD35PSbslGCkQK5Tbqg1swcIksQJRD/view?usp=sharing)
+[Download](https://drive.google.com/file/d/1pqyD35PSbslGCkQK5Tbqg1swcIksQJRD/view?usp=sharing)
 
 ## License
 ComMU dataset is released under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0). It is provided primarily for research purposes and is prohibited to be used for commercial purposes.
