@@ -1,20 +1,6 @@
 # Group Encoding for ComMU: Dataset for Combinatorial Music Generation
 
 ### [Notion](https://www.notion.so/binne/Group_Encoding-3327efecd89b47f9a44bdcd97ba4b347?pvs=4)
-  
-## Group Encoding 
-
-<p align="center">
-<img width="600" alt="group" src="https://user-images.githubusercontent.com/68505714/225891370-6de30c11-446a-44c4-885f-8896b9a0aa2b.png">
-</p>
-
-<p align="center">
-<img width="400" alt="EncodedMidi" src="https://user-images.githubusercontent.com/68505714/225893462-4f81990d-d79f-47ef-860c-f6cfb2e46336.png">
-</p>
-
-<p align="center">
-<img width="1600" alt="Encoding" src="https://user-images.githubusercontent.com/68505714/225891056-73ca56ca-ea98-4fb1-b459-f7820bde9f98.png">
-</p>
 
 ## Getting Started
 - Note : This Project requires python version `3.8.12`. Set the virtual environment if needed.
