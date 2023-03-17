@@ -2,6 +2,10 @@
 
 ### [Notion](https://www.notion.so/binne/Group_Encoding-3327efecd89b47f9a44bdcd97ba4b347?pvs=4)
 
+<p align="center">
+<img width="400" alt="EncodedMidi" src="https://user-images.githubusercontent.com/68505714/225893462-4f81990d-d79f-47ef-860c-f6cfb2e46336.png">
+</p>
+
 ## Getting Started
 - Note : This Project requires python version `3.8.12`. Set the virtual environment if needed.
 
