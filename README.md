@@ -4,8 +4,11 @@
     <img width="100%" height="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:B993D6,100:8CA6DB&height=220&section=header&fontSize=40&fontColor=ffffff&animation=fadeIn&fontAlignY=40&text=Improving%20Transformer-XL" alt="header" />
 </a></p>
 <h3 align="center">Improving Transformer-XL for Music Generation</h3>
-<p align="center"><a href="https://github.com/YAIxPOZAlabs"><img src="assets/figure00_logo.png" width=50% height=50% alt="logo"></a></p>
+
+<p align="center"><a href="https://github.com/YAIxPOZAlabs"><img src="https://raw.githubusercontent.com/YAIxPOZAlabs/MuseDiffusion/master/assets/figure00_logo.png" width=50% height=50% alt="logo"></a></p>
+
 <p align="center">This project was carried out by <b><a href="https://github.com/yonsei-YAI">YAI 11th</a></b>, in cooperation with <b><a href="https://github.com/POZAlabs">POZAlabs</a></b>.</p>
+
 <p align="center">
 <br>
 <a href="mailto:dhakim@yonsei.ac.kr">
@@ -49,6 +52,24 @@ NLP model for music generation <br>
 For a vanila transformer-XL model, it inputs tokens in a 1d sequence and adds Positional Encoding to give the model information about the position between tokens. In this setting, the model learns about the semantics of the data as well as the structure of the MIDI data. However, as there is a explicit pattern when encoding MIDI data in to sequence of tokens, we propose a Group Encoding method that gives an inductive bias about the explicit structure of the sequence data
  to the model. 
  
+<p align="center">
+<img width="500" alt="group" src="https://user-images.githubusercontent.com/68505714/225891370-6de30c11-446a-44c4-885f-8896b9a0aa2b.png">
+</p>
+
+<p align="center">
+<img width="400" alt="EncodedMidi" src="https://user-images.githubusercontent.com/68505714/225893462-4f81990d-d79f-47ef-860c-f6cfb2e46336.png">
+</p>
+
+<p align="center">
+<img width="800" alt="Encoding" src="https://user-images.githubusercontent.com/68505714/225891056-73ca56ca-ea98-4fb1-b459-f7820bde9f98.png">
+</p>
+
+sampled audio
+
+https://user-images.githubusercontent.com/68505714/225961723-93262632-abc2-41d0-8b8f-de2bafd5cc57.mov
+
+
+
 ## 2. Soft Labeling
 To prevent overfitting of the model, techniques such as soft labeling are often used. We apply soft labeling on velocity, duration, and position information, so it can be flexibly predicted. For example, if the target of the token value is 300, the logit is reconstructed by referring to the logit value of the 298/299/301/302 token. As a result of using soft labeling, we confirm that the token appears more flexible than baseline.
 
