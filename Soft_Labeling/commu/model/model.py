@@ -4,12 +4,13 @@ import torch.nn.functional as F
 
 
 class ProjectedAdaptiveLogSoftmax(nn.Module):
-    def __init__(self, n_token, d_embed, d_proj, cutoffs=None, keep_order=False):
+    def __init__(self, args, n_token, d_embed, d_proj, cutoffs=None, keep_order=False):
         super(ProjectedAdaptiveLogSoftmax, self).__init__()
 
         if cutoffs is None:
             cutoffs = []
-
+    
+        self.args = args
         self.n_token = n_token
         self.d_embed = d_embed
         self.d_proj = d_proj
@@ -54,12 +55,13 @@ class ProjectedAdaptiveLogSoftmax(nn.Module):
         # velocity : 131~194
         # duration : 304~431
         # position : 432~559
+        weight = args.soft_label
         i = ((target >= 132) & (target <= 193)) | ((target >= 305) & (target <= 430)) | (
                     (target >= 433) & (target <= 558))
         idx = i.nonzero().squeeze()
         tmp = target[idx]
         ret = torch.empty_like(logit).copy_(logit)
-        ret[idx, tmp] = logit[idx, tmp - 1] * 0.15 + logit[idx, tmp] * 0.7 + logit[idx, tmp + 1] * 0.15
+        ret[idx, tmp] =  logit[idx, tmp - 2] * weight[0] + logit[idx, tmp - 1] * weight[1] + logit[idx, tmp] * weight[2] + logit[idx, tmp + 1] * weight[3] + logit[idx, tmp + 2] * weight[4]
         return ret
 
     def forward(self, hidden, target, keep_order=False):
@@ -438,7 +440,8 @@ class MemTransformerLM(nn.Module):
     def __init__(
             self,
             cfg,
-            vocab
+            vocab,
+            args
     ):
         n_layer = cfg.MODEL.num_layers
         n_head = cfg.MODEL.num_heads
@@ -455,6 +458,7 @@ class MemTransformerLM(nn.Module):
 
         super(MemTransformerLM, self).__init__()
         self.cfg = cfg
+        self.args = args
         self.n_token = len(vocab)
         d_embed = d_model if d_embed is None else d_embed
         self.d_embed = d_embed
@@ -488,7 +492,7 @@ class MemTransformerLM(nn.Module):
                 )
             )
         self.crit = ProjectedAdaptiveLogSoftmax(
-            self.n_token, d_embed, d_model
+            args, self.n_token, d_embed, d_model
         )
 
         for i in range(len(self.crit.out_layers)):
