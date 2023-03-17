@@ -45,7 +45,7 @@ NLP model for music generation <br>
 
 # Building on Transformer-XL
 
-## 0. Baseline (Transformer-XL)
+## 0. Baseline (Transformer-XL) - [Link](https://github.com/kimiyoung/transformer-xl)
  Transformer-XL: Attentive Language Models Beyond a Fixed-Length Context
 
 ## 1. Group Encoding - [Link](https://github.com/YAIxPOZAlabs/Generation/tree/master/Group_Encoding)
