@@ -68,6 +68,8 @@ Please refer to the explanations below to generate certain samples needed for ev
 
 
 ### Classification Accuracy Score
+<img width="80%" src="https://user-images.githubusercontent.com/73946308/225903685-b8680fe4-4c31-4456-88d0-501cbb1d509a.png"/>
+
 - To compute Classicication Accuracy Score of Generated Music conditioned with certain meta data 
 
 to generate samples, run
