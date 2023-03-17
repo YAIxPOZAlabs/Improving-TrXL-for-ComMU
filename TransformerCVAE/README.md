@@ -2,9 +2,12 @@
 
 [Notion](https://www.notion.so/binne/Transformer_CVAE-17bffaac1ca34e73b4042ec8d80921f8?pvs=4)
 
+<p align='center'>
+<img src="https://user-images.githubusercontent.com/68505714/225926339-0a896169-c513-4a60-827d-84874e36c594.png" alt="CVAE" width="400" height="600">
+</p>
 
 ## Getting Started
-- Note : This Project requires python version `3.8.12` and pytorch **1.13.0**. Set the virtual environment if needed.
+- Note : This Project requires python version `3.8.12` and `pytorch 1.13.0`. Set the virtual environment if needed.
 ### Setup
 1. Clone this repository
 2. Install required packages
@@ -15,8 +18,6 @@ pip install -r requirements.txt
 This is preprocessed data. You don't need to preprocess anymore.
 ```
 cd dataset && ./download.sh && cd ..
-```
-
 ```
 
 ## Training
@@ -46,4 +47,4 @@ python3 generateCVAE.py \
 ```
 
 ## Checkpoints
-- Sadly, No checkpoints are available in this project..
+- Sadly, No checkpoint is available in this project..
