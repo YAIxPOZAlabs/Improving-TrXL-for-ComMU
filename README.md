@@ -49,7 +49,7 @@ NLP model for music generation <br>
  Transformer-XL: Attentive Language Models Beyond a Fixed-Length Context
 
 ## 1. Group Encoding - [Link](https://github.com/YAIxPOZAlabs/Generation/tree/master/Group_Encoding)
-For a vanila transformer-XL model, it inputs tokens in a 1d sequence and adds Positional Encoding to give the model information about the position between tokens. In this setting, the model learns about the semantics of the data as well as the structure of the MIDI data. However, as there is a explicit pattern when encoding MIDI data in to sequence of tokens, we propose a Group Encoding method that gives an inductive bias about the explicit structure of the sequence data
+For a vanila transformer-XL model, it inputs tokens in a 1d sequence and adds Positional Encoding to give the model information about the position between tokens. In this setting, the model learns about the semantics of the data as well as the structure of the MIDI data. However, as there is an explicit pattern when encoding MIDI data in to sequence of tokens, we propose a Group Encoding method that gives an inductive bias about the explicit structure of the sequence data. This not only keeps the model from inferencing strange tokens in strange positions, it also boosts the training and inference speed allowing the model to generate 4 tokens in a single feed forward.
  to the model. 
  
 <p align="center">
