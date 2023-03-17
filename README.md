@@ -1,3 +1,28 @@
+<!-- HEADER START -->
+<!-- src: https://github.com/kyechan99/capsule-render -->
+<p align="center"><a href="#">
+    <img width="100%" height="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:B993D6,100:8CA6DB&height=220&section=header&fontSize=40&fontColor=ffffff&animation=fadeIn&fontAlignY=40&text=%E2%97%A6%20%CB%9A%20%20%EF%BC%AD%20%EF%BD%95%EF%BD%93%EF%BD%85%20%EF%BC%A4%EF%BD%89%EF%BD%86%EF%BD%86%EF%BD%95%EF%BD%93%EF%BD%89%EF%BD%8F%EF%BD%8E%20%CB%9A%20%E2%97%A6" alt="header" />
+</a></p>
+<h3 align="center">Music generation from Unclear midi SEquence with Diffusion model</h3>
+<p align="center"><a href="https://github.com/YAIxPOZAlabs"><img src="assets/figure00_logo.png" width=50% height=50% alt="logo"></a></p>
+<p align="center">This project was carried out by <b><a href="https://github.com/yonsei-YAI">YAI 11th</a></b>, in cooperation with <b><a href="https://github.com/POZAlabs">POZAlabs</a></b>.</p>
+<p align="center">
+<br>
+<a href="mailto:dhakim@yonsei.ac.kr">
+    <img src="https://img.shields.io/badge/-Gmail-D14836?style=flat-square&logo=gmail&logoColor=white" alt="Gmail"/>
+</a>
+<a href="https://www.notion.so/dhakim/1e7dc19fd1064e698a389f75404883c7?pvs=4">
+    <img src="https://img.shields.io/badge/-Project%20Page-000000?style=flat-square&logo=notion&logoColor=white" alt="NOTION"/>
+</a>
+<a href="#">
+    <img src="https://img.shields.io/badge/-Full%20Report-dddddd?style=flat-square&logo=latex&logoColor=black" alt="REPORT"/>
+</a>
+</p>
+<br>
+<hr>
+<!-- HEADER END -->
+
+
 # Improving Transformer-XL for Music Generation
 YAI x POZAlabs 산학협력 1팀 <br>
 NLP model for music generation <br>
