@@ -49,12 +49,14 @@ NLP model for music generation <br>
  Transformer-XL: Attentive Language Models Beyond a Fixed-Length Context
 
 ## 1. Group Encoding - [Link](https://github.com/YAIxPOZAlabs/Generation/tree/master/Group_Encoding)
-For a vanila transformer-XL model, it inputs tokens in a 1d sequence and adds Positional Encoding to give the model information about the position between tokens. In this setting, the model learns about the semantics of the data as well as the structure of the MIDI data. However, as there is an explicit pattern when encoding MIDI data in to sequence of tokens, we propose a Group Encoding method that injects an inductive bias about the explicit structure of the token sequence to the model. This not only keeps the model from inferencing strange tokens in strange positions, it also allows the model to generate 4 tokens in a single feed forward, boosting the training and inference speed.
+For a vanila transformer-XL model, it inputs tokens in a 1d sequence and adds Positional Encoding to give the model information about the position between tokens. In this setting, the model learns about the semantics of the data as well as the structure of the MIDI data. However, as there is an explicit pattern when encoding MIDI data in to sequence of tokens, we propose a Group Encoding method that injects an inductive bias about the explicit structure of the token sequence to the model. This not only keeps the model from inferencing strange tokens in strange positions, it also allows the model to generate 4 tokens in a single feed forward, boosting the training speed as well as the inference speed of the model.
 
- 
+
 <p align="center">
-<img width="500" alt="group" src="https://user-images.githubusercontent.com/68505714/225891370-6de30c11-446a-44c4-885f-8896b9a0aa2b.png">
+<img width="500" src="https://user-images.githubusercontent.com/68505714/225891370-6de30c11-446a-44c4-885f-8896b9a0aa2b.png" alt="group">
 </p>
+
+
 
 <p align="center">
 <img width="800" alt="Encoding" src="https://user-images.githubusercontent.com/68505714/225891056-73ca56ca-ea98-4fb1-b459-f7820bde9f98.png">
