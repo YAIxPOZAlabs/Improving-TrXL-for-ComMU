@@ -91,12 +91,22 @@ https://github.com/POZAlabs/ComMU-code
 
 <br>
 
-## Metrics
+# Metrics
 To evaluate generation models we have to generate data with trained models and depending on what metrics we want to use, the generation proccess differ. 
 Please refer to the explanations below to generate certain samples needed for evaluation.
 
 
-### Classification Accuracy Score - [Link](https://github.com/YAIxPOZAlabs/Generation/tree/master/CAS)
+## Classification Accuracy Score - [Link](https://github.com/YAIxPOZAlabs/Generation/tree/master/CAS)
+ Evaluating Generative Models is an open problem and for Music generation has not been well defined. Inspired by 'Classification Accuracy Score for Conditional Generative Models' we use CAS as an evaluation metric for out music generation models. THe procedure of our CAS is the following
+ 
+ 0. Train a Music Generation Model with ComMU train set which we call 'Real Dataset'
+ 1. Generate samples and form a dataset which we call 'Fake Dataset'
+ 2. Train a classification model with 'Real Dataset' which we call 'Real Model'
+ 3. Train a classification model with 'Fake Dataset' which we call 'Fake Model'
+ 4. For each lable (meta data) we compare the performance of 'Fake Model' and 'Real Model' on ComMU validation set
+ 
+ 
+ 
 <p align="center">
 <img width="80%" src="https://user-images.githubusercontent.com/73946308/225903685-b8680fe4-4c31-4456-88d0-501cbb1d509a.png"/>
 </p>
@@ -117,7 +127,7 @@ $ python compute_CAS_all.py --midi_dir {./data.npy} --meta_dir {./meta.npy}
 ```
 
 
-### Diversity
+## Diversity
 - To compute the Diversity of Generated Music conditioned with certain meta data
 
 to generate sampels, run
