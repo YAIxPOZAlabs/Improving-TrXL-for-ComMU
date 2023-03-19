@@ -17,7 +17,7 @@ pip install -r requirements.txt
 
 ## Training
 ```
-python3 -m torch.distributed.launch --nproc_per_node=4 ./train.py --data_dir ./dataset/output_npy --work_dir ./workdir
+python3 -m torch.distributed.launch --nproc_per_node=4 ./train.py --data_dir ./dataset/output_npy --work_dir ./workdir --soft_argument [0, 0.15, 0.7, 0.15, 0]
 ```
 
 ## Checkpoint File
