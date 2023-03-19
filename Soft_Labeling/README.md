@@ -21,8 +21,8 @@ python3 -m torch.distributed.launch --nproc_per_node=4 ./train.py --data_dir ./d
 ```
 
 ## Checkpoint File
-This is our model(group encoding)'s checkpoint!
-[Download](not_yet)
+This is our model(soft labeling)'s checkpoint!
+[Download](https://drive.google.com/file/d/1DPA3Gsc_mT4myhZzdXsdMUNptHiYGAsE/view?usp=share_link)
 
 ## License
 ComMU dataset is released under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0). It is provided primarily for research purposes and is prohibited to be used for commercial purposes.
