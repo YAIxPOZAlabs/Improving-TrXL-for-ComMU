@@ -49,21 +49,21 @@ NLP model for music generation <br>
  Transformer-XL: Attentive Language Models Beyond a Fixed-Length Context
 ### Evaluation
 #### Classifcation Accuracy Score
-|             Lable(Meta)          |  ComMU Validation set | Fake dataset generated with Transformer XL  | 
-|-----------------------|----|----------|
-| BPM | 0.6291	| 0.6159 |
-| KEY | 0.8781|  0.8781 |
-| TIMESIGNATURE | 0.9082 | 0.8925 |
-| PITCHRANGE | 0.7483 | 0.7090 | 
-| NUMEIEROFMEASURE | 1.0 | 1.0 |
-| INSTRUMENT | 0.5858 | 0.5923|
-| GENRE | 0.8532 | 0.8427 |
-| MINVELOCITY | 0.4718 | 0.4482 |
-| MAXVELOCITY | 0.4718 | 0.4495 | 
-| TRACKROLE | 0.6500 | 0.5753 | 
-| RHYTHM | 0.9934 | 0.9934 |  
+|             Lable(Meta)          |  Real Model | Fake Model | error rate | 
+|-----------------------|----|----------|-----|
+| BPM | 0.6291	| 0.6159 |0.02098|
+| KEY | 0.8781|  0.8781 | 0 | 
+| TIMESIGNATURE | 0.9082 | 0.8925 |0.01728|
+| PITCHRANGE | 0.7483 | 0.7090 | 0.05251 |
+| NUMEIEROFMEASURE | 1.0 | 1.0 | |
+| INSTRUMENT | 0.5858 | 0.5923| |
+| GENRE | 0.8532 | 0.8427 | 0.01230 |
+| MINVELOCITY | 0.4718 | 0.4482 | |
+| MAXVELOCITY | 0.4718 | 0.4495 |  |
+| TRACKROLE | 0.6500 | 0.5753 | 0.11492 |
+| RHYTHM | 0.9934 | 0.9934 |   |
 
-Normalized Mean CAS Difference across all lables  : *0.0276*
+Normalized Mean CASD   : *0.03633*
 
 
 ## 1. Group Encoding - [Link](https://github.com/YAIxPOZAlabs/Generation/tree/master/Group_Encoding)
@@ -92,21 +92,21 @@ For a vanila transformer-XL model, it inputs tokens in a 1d sequence and adds Po
 | Transformer XL w GE   |   0.8493	| 0.7391 | 0.9821	| 0.9839	| 0.4113    |
 
 #### Classification Accuracy Score
-|             Lable(Meta)          |  ComMU Validation set | Fake dataset generated with Transformer XL w GE  | 
-|-----------------------|----|----------|
-| BPM | 0.6291	| 0.5910 |
-| KEY | 0.8781|  0.8532 |
-| TIMESIGNATURE | 0.9082 | 0.8951 |
-| PITCHRANGE | 0.7483 | 0.7195 | 
+|             Lable(Meta)          |  ComMU Validation set | Fake dataset generated with Transformer XL w GE  |error rate |
+|-----------------------|----|----------|---|
+| BPM | 0.6291	| 0.5910 |0.0606|
+| KEY | 0.8781|  0.8532 |0.0284|
+| TIMESIGNATURE | 0.9082 | 0.8951 | |
+| PITCHRANGE | 0.7483 | 0.7195 | 0.0385|
 | NUMEIEROFMEASURE | 1.0 | 1.0 |
 | INSTRUMENT | 0.5858 | 0.5884|
-| GENRE | 0.8532 | 0.8532 |
+| GENRE | 0.8532 | 0.8532 | 0 |
 | MINVELOCITY | 0.4718 | 0.4364 |
 | MAXVELOCITY | 0.4718 | 0.4560 | 
-| TRACKROLE | 0.6500 | 0.5360 | 
+| TRACKROLE | 0.6500 | 0.5360 | 0.1754 |
 | RHYTHM | 0.9934 | 0.9934 |  
 
-Normalized Mean CAS Difference across all lables  : *0.0383*
+Normalized Mean CASD : *0.06055*
 
   
 ### Sampled Audio
@@ -183,12 +183,15 @@ Please refer to the explanations below to generate certain samples needed for ev
  2. Train a classification model with 'Real Dataset' which we call 'Real Model'
  3. Train a classification model with 'Fake Dataset' which we call 'Fake Model'
  4. For each lable (meta data) we compare the performance of 'Fake Model' and 'Real Model' on ComMU validation set
- 
- 
+
+ From the above procedure we can obtain CAS for a certain label (meta) we want to evaluate. If the difference between the accuracy of the 'Fake Model' and 'Real Model' is low, it means our generation model has captured the data distribution w.r.t the certain label well.
+ For our experiments on vanila Transformer-XL, Transformer-XL with GE and Transformer-XL with SL, we calculate CAS on all 11 labels. However, some labels such as Number of Measure, Time Signature or Rhythm are usuited for evaluation. Therfore we select BPM, KEY, PITCH RANGE, GENRE and TRACK-ROLE and calculate the Normalized Mean Classification Accuracy Difference Score denoting it as CADS. We obtain CADS as the following. 
  
 <p align="center">
 <img width="80%" src="https://user-images.githubusercontent.com/73946308/225903685-b8680fe4-4c31-4456-88d0-501cbb1d509a.png"/>
 </p>
+
+
 
 - To compute Classicication Accuracy Score of Generated Music conditioned with certain meta data 
 
