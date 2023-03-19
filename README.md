@@ -62,8 +62,9 @@ For a vanila transformer-XL model, it inputs tokens in a 1d sequence and adds Po
 </p>
 
 <p align="center">
-<img width="800" alt="Encoding" src="https://user-images.githubusercontent.com/68505714/225891056-73ca56ca-ea98-4fb1-b459-f7820bde9f98.png">
+<img width="1089" alt="GE_1" src="https://user-images.githubusercontent.com/73946308/226155426-98fe608d-be28-4160-ad48-cf40c65d0728.png">
 </p>
+
 
 sampled audio
 
@@ -73,6 +74,7 @@ https://user-images.githubusercontent.com/68505714/225961723-93262632-abc2-41d0-
 
 ## 2. Soft Labeling - [Link](https://github.com/YAIxPOZAlabs/Generation/tree/master/Soft_Labeling)
 To prevent overfitting of the model, techniques such as soft labeling are often used. We apply soft labeling on velocity, duration, and position information, so it can be flexibly predicted. For example, if the target of the token value is 300, the logit is reconstructed by referring to the logit value of the 298/299/301/302 token. As a result of using soft labeling, we confirm that the token appears more flexible than baseline.
+<img width="517" alt="softlabeling" src="https://user-images.githubusercontent.com/73946308/226155428-60fceb1c-6e78-436a-b8fc-edf231c8c695.png">
 
 ## 3. Gated Transformer-XL - [Link](https://github.com/YAIxPOZAlabs/Generation/tree/master/Gated_Transformer-XL)
 
