@@ -63,7 +63,7 @@ NLP model for music generation <br>
 | TRACKROLE | 0.6500 | 0.5753 | 
 | RHYTHM | 0.9934 | 0.9934 |  
 
-Normalized Mean CAS score for all lables : *0.0276*
+Normalized Mean CAS Difference across all lables  : *0.0276*
 
 
 ## 1. Group Encoding - [Link](https://github.com/YAIxPOZAlabs/Generation/tree/master/Group_Encoding)
@@ -106,7 +106,7 @@ For a vanila transformer-XL model, it inputs tokens in a 1d sequence and adds Po
 | TRACKROLE | 0.6500 | 0.5360 | 
 | RHYTHM | 0.9934 | 0.9934 |  
 
-Normalized Mean CAS score for all lables : *0.0383*
+Normalized Mean CAS Difference across all lables  : *0.0383*
 
   
 ### Sampled Audio
@@ -139,6 +139,24 @@ To prevent overfitting of the model, techniques such as soft labeling are often 
 <p align="center">
 <img width="517" alt="softlabeling" src="https://user-images.githubusercontent.com/73946308/226155428-60fceb1c-6e78-436a-b8fc-edf231c8c695.png">
 </p>
+
+### Evaluation
+#### Classification Accuracy Score
+|             Lable(Meta)          |  ComMU Validation set | Fake dataset generated with Transformer XL w SL | 
+|-----------------------|----|----------|
+| BPM | 0.6291	| 0.6133 |
+| KEY | 0.8781|  0.8741 |
+| TIMESIGNATURE | 0.9082 | 0.8990 |
+| PITCHRANGE | 0.7483 | 0.7195 | 
+| NUMEIEROFMEASURE | 1.0 | 1.0 |
+| INSTRUMENT | 0.5858 | 0.5740 |
+| GENRE | 0.8532 | 0.8440 |
+| MINVELOCITY | 0.4718 | 0.4429 |
+| MAXVELOCITY | 0.4718 | 0.4429 | 
+| TRACKROLE | 0.6500 | 0.5661 | 
+| RHYTHM | 0.9934 | 0.9934 |  
+
+Normalized Mean CAS Difference across all lables : *0.0323*9
 
 ## 3. Gated Transformer-XL - [Link](https://github.com/YAIxPOZAlabs/Generation/tree/master/Gated_Transformer-XL)
 
