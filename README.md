@@ -47,6 +47,24 @@ NLP model for music generation <br>
 
 ## 0. Baseline (Transformer-XL) - [Link](https://github.com/kimiyoung/transformer-xl)
  Transformer-XL: Attentive Language Models Beyond a Fixed-Length Context
+### Evaluation
+#### Classifcation Accuracy Score
+|             Lable(Meta)          |  ComMU Validation set | Fake dataset generated with Transformer XL  | 
+|-----------------------|----|----------|
+| BPM | 0.6291	| 0.6159 |
+| KEY | 0.8781|  0.8781 |
+| TIMESIGNATURE | 0.9082 | 0.8925 |
+| PITCHRANGE | 0.7483 | 0.7090 | 
+| NUMEIEROFMEASURE | 1.0 | 1.0 |
+| INSTRUMENT | 0.5858 | 0.5923|
+| GENRE | 0.8532 | 0.8427 |
+| MINVELOCITY | 0.4718 | 0.4482 |
+| MAXVELOCITY | 0.4718 | 0.4495 | 
+| TRACKROLE | 0.6500 | 0.5753 | 
+| RHYTHM | 0.9934 | 0.9934 |  
+
+Normalized Mean CAS score for all lables : *0.0276*
+
 
 ## 1. Group Encoding - [Link](https://github.com/YAIxPOZAlabs/Generation/tree/master/Group_Encoding)
 For a vanila transformer-XL model, it inputs tokens in a 1d sequence and adds Positional Encoding to give the model information about the position between tokens. In this setting, the model learns about the semantics of the data as well as the structure of the MIDI data. However, as there is an explicit pattern when encoding MIDI data in to sequence of tokens, we propose a Group Encoding method that injects an inductive bias about the explicit structure of the token sequence to the model. This not only keeps the model from inferencing strange tokens in strange positions, it also allows the model to generate 4 tokens in a single feed forward, boosting the training speed as well as the inference speed of the model.
@@ -65,8 +83,51 @@ For a vanila transformer-XL model, it inputs tokens in a 1d sequence and adds Po
 <img width="1089" alt="GE_1" src="https://user-images.githubusercontent.com/73946308/226155426-98fe608d-be28-4160-ad48-cf40c65d0728.png">
 </p>
 
+### Evaluation 
+#### Controllability and Diversity
 
-sampled audio
+|                       | CP | CV(Midi) | CV(Note) | CH | Diversity |
+|-----------------------|----|----------|----------|----|-----------|
+| Transformer XL w/o GE | 0.8585	| 0.8060 | 0.9847 | 0.9891 | 0.4100     |
+| Transformer XL w GE   |   0.8493	| 0.7391 | 0.9821	| 0.9839	| 0.4113    |
+
+#### Classification Accuracy Score
+|             Lable(Meta)          |  ComMU Validation set | Fake dataset generated with Transformer XL w GE  | 
+|-----------------------|----|----------|
+| BPM | 0.6291	| 0.5910 |
+| KEY | 0.8781|  0.8532 |
+| TIMESIGNATURE | 0.9082 | 0.8951 |
+| PITCHRANGE | 0.7483 | 0.7195 | 
+| NUMEIEROFMEASURE | 1.0 | 1.0 |
+| INSTRUMENT | 0.5858 | 0.5884|
+| GENRE | 0.8532 | 0.8532 |
+| MINVELOCITY | 0.4718 | 0.4364 |
+| MAXVELOCITY | 0.4718 | 0.4560 | 
+| TRACKROLE | 0.6500 | 0.5360 | 
+| RHYTHM | 0.9934 | 0.9934 |  
+
+Normalized Mean CAS score for all lables : *0.0383*
+
+  
+### Sampled Audio
+  5 note sequences with shared and different meta data were sampled by the following conditions and mixed together. 
+  - Shared meta data acrross 5 samples
+    - audio_key : aminor
+    - chord_progressions  : [['Am', 'Am', 'Am', 'Am', 'Am', 'Am', 'Am', 'Am', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'G', 'G', 'G', 'G', 'G', 'G', 'G', 'G', 'Dm', 'Dm', 'Dm', 'Dm', 'Dm', 'Dm', 'Dm', 'Dm', 'Am', 'Am', 'Am', 'Am', 'Am', 'Am', 'Am', 'Am', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'G', 'G', 'G', 'G', 'G', 'G', 'G', 'G', 'D', 'D', 'D', 'D', 'D', 'D', 'D', 'D']]
+    - time_signature  : 4/4
+    - genre : cinematic
+    - bpm : 120
+    - rhythm : standard
+
+- Different meta data for each instrument
+    - riff string_violin mid_high standard \n
+    - main_melody string_ensemble mid_high \m
+    - sub_melody string_cello very_low \n
+    - pad acoustic_piano mid_low \n
+    - sub_melody brass_ensemble mid \n
+
+
+
 
 https://user-images.githubusercontent.com/68505714/225961723-93262632-abc2-41d0-8b8f-de2bafd5cc57.mov
 
