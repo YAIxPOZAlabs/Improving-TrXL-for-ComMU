@@ -1,5 +1,7 @@
 # Soft Labeling
 
+### [Notion](https://www.notion.so/binne/soft-labeling-13484810535e452aaa7e8581179f3b03)
+
 ## Getting Started
 - Note : This Project requires python version `3.8.12`. Set the virtual environment if needed.
 
