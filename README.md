@@ -120,11 +120,11 @@ Normalized Mean CASD : *0.06055*
     - rhythm : standard
 
 - Different meta data for each instrument
-    - riff string_violin mid_high standard \n
-    - main_melody string_ensemble mid_high \m
-    - sub_melody string_cello very_low \n
-    - pad acoustic_piano mid_low \n
-    - sub_melody brass_ensemble mid \n
+    - riff string_violin mid_high standard 
+    - main_melody string_ensemble mid_high 
+    - sub_melody string_cello very_low 
+    - pad acoustic_piano mid_low 
+    - sub_melody brass_ensemble mid 
 
 
 
