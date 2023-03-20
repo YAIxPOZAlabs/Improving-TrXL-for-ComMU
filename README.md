@@ -92,7 +92,7 @@ For a vanila transformer-XL model, it inputs tokens in a 1d sequence and adds Po
 | Transformer XL w GE   |   0.8493	| 0.7391 | 0.9821	| 0.9839	| 0.4113    |
 
 #### Classification Accuracy Score
-|             Lable(Meta)          |  ComMU Validation set | Fake Model   |error rate |
+|             Lable(Meta)          |  Real Model | Fake Model   |error rate |
 |-----------------------|----|----------|---|
 | BPM | 0.6291	| 0.5910 |0.0606|
 | KEY | 0.8781|  0.8532 |0.0284|
@@ -160,7 +160,7 @@ To prevent overfitting of the model, techniques such as soft labeling are often 
 
 
 #### Classification Accuracy Score
-|             Lable(Meta)          |  ComMU Validation set |  Fake Model  | error rate |
+|             Lable(Meta)          |  Real Model |  Fake Model  | error rate |
 |-----------------------|----|----------|---|
 | BPM | 0.6291	| 0.6133 |0.0251 |
 | KEY | 0.8781|  0.8741 |0.0046 |
