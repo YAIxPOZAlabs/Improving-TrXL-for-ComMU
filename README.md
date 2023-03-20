@@ -52,6 +52,7 @@ Generation/
 ├─ TransformerCVAE/
 
 ```
+As for Baseline which is Transformer-XL trained on ComMU-Dataset, refer to the ComMU-code by POZAlabs
 
 # Building on Transformer-XL
 
