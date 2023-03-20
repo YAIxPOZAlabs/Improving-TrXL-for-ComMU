@@ -30,18 +30,20 @@ YAI x POZAlabs 산학협력 1팀 <br>
 NLP model for music generation <br>
 
 # Members
-👑조정빈<br>
-박민수<br>
-박수빈<br>
-김성준<br>
-김산<br>
-김민서<br>
-</br>
-
-## Requirements
-### Versions (Recommended)
-
+<b> <a href="https://github.com/whwjdqls">조정빈</a></b>&nbsp; :&nbsp; YAI 10th&nbsp; /&nbsp;whwjdqls99@yonsei.ac.kr 
 <br>
+<b>  <a href="">김민서</a></b>&nbsp; :&nbsp; YAI 10th&nbsp; /&nbsp; min99830@yonsei.ac.kr  <br>
+<b> <a href="https://github.com/mounKim">김산</a></b>&nbsp; :&nbsp; YAI 9th&nbsp; /&nbsp; nasmik419@yonsei.ac.kr <br>
+<b> <a href="https://github.com/Tim3s">김성준</a></b>&nbsp; :&nbsp; YAI 9th&nbsp; /&nbsp;sjking0825@gmail.com <br>
+<b> <a href="</br>https://github.com/0601p">박민수</a></b>&nbsp; :&nbsp; YAI 10th&nbsp; /&nbsp;0601p@naver.com  <br>
+<b><a href="https://github.com/starwh03">박수빈</a></b>&nbsp; :&nbsp; YAI 10th&nbsp; /&nbsp;sallyna602@yonsei.ac.kr <br>
+<br><br>
+<hr>
+
+
+# Getting Started
+As there are different models and metrics, we recommand using seperate virtual envs for each.
+
 
 # Building on Transformer-XL
 
