@@ -51,19 +51,19 @@ NLP model for music generation <br>
 #### Classifcation Accuracy Score
 |             Lable(Meta)          |  Real Model | Fake Model | error rate | 
 |-----------------------|----|----------|-----|
-| BPM | 0.6291	| 0.6159 |0.02098|
-| KEY | 0.8781|  0.8781 | 0 | 
-| TIMESIGNATURE | 0.9082 | 0.8925 |0.01728|
-| PITCHRANGE | 0.7483 | 0.7090 | 0.05251 |
+| BPM | 0.6291	| 0.6159 |0.0210 |
+| KEY | 0.8781|  0.8781 |  0 | 
+| TIMESIGNATURE | 0.9082 | 0.8925 | |
+| PITCHRANGE | 0.7483 | 0.7090 | 0.0525 |
 | NUMEIEROFMEASURE | 1.0 | 1.0 | |
 | INSTRUMENT | 0.5858 | 0.5923| |
-| GENRE | 0.8532 | 0.8427 | 0.01230 |
+| GENRE | 0.8532 | 0.8427 | 0.0123 |
 | MINVELOCITY | 0.4718 | 0.4482 | |
 | MAXVELOCITY | 0.4718 | 0.4495 |  |
-| TRACKROLE | 0.6500 | 0.5753 | 0.11492 |
+| TRACKROLE | 0.6500 | 0.5753 | 0.1149 |
 | RHYTHM | 0.9934 | 0.9934 |   |
 
-Normalized Mean CASD   : *0.03633*
+Normalized Mean CASD   : *0.0401*
 
 
 ## 1. Group Encoding - [Link](https://github.com/YAIxPOZAlabs/Generation/tree/master/Group_Encoding)
@@ -106,7 +106,13 @@ For a vanila transformer-XL model, it inputs tokens in a 1d sequence and adds Po
 | TRACKROLE | 0.6500 | 0.5360 | 0.1754 |
 | RHYTHM | 0.9934 | 0.9934 |  
 
-Normalized Mean CASD : *0.06055*
+Normalized Mean CASD : *0.0605*
+
+#### Inference Speed
+|                       | Inference time for Valset | Inference speed per sample | relative speed up|
+|-----------------------|----|----------|---|
+| Transformer XL w/o GE | 1189.4s | 1.558s per sample | X1 | 
+| Transformer XL w GE   |   692.2s	| 0.907s per sample | X1.718  |
 
   
 ### Sampled Audio
@@ -154,21 +160,21 @@ To prevent overfitting of the model, techniques such as soft labeling are often 
 
 
 #### Classification Accuracy Score
-|             Lable(Meta)          |  ComMU Validation set |  Fake Model  | 
-|-----------------------|----|----------|
-| BPM | 0.6291	| 0.6133 |
-| KEY | 0.8781|  0.8741 |
-| TIMESIGNATURE | 0.9082 | 0.8990 |
-| PITCHRANGE | 0.7483 | 0.7195 | 
-| NUMEIEROFMEASURE | 1.0 | 1.0 |
-| INSTRUMENT | 0.5858 | 0.5740 |
-| GENRE | 0.8532 | 0.8440 |
-| MINVELOCITY | 0.4718 | 0.4429 |
-| MAXVELOCITY | 0.4718 | 0.4429 | 
-| TRACKROLE | 0.6500 | 0.5661 | 
-| RHYTHM | 0.9934 | 0.9934 |  
+|             Lable(Meta)          |  ComMU Validation set |  Fake Model  | error rate |
+|-----------------------|----|----------|---|
+| BPM | 0.6291	| 0.6133 |0.0251 |
+| KEY | 0.8781|  0.8741 |0.0046 |
+| TIMESIGNATURE | 0.9082 | 0.8990 | |
+| PITCHRANGE | 0.7483 | 0.7195 | 0.0385|
+| NUMEIEROFMEASURE | 1.0 | 1.0 | |
+| INSTRUMENT | 0.5858 | 0.5740 | |
+| GENRE | 0.8532 | 0.8440 |0.0108 |
+| MINVELOCITY | 0.4718 | 0.4429 | |
+| MAXVELOCITY | 0.4718 | 0.4429 |  |
+| TRACKROLE | 0.6500 | 0.5661 | 0.1291 |
+| RHYTHM | 0.9934 | 0.9934 | | 
 
-Normalized Mean CAS Difference across all lables : *0.0323*9
+Normalized Mean CASD: *0.0416*
 
 ## 3. Gated Transformer-XL - [Link](https://github.com/YAIxPOZAlabs/Generation/tree/master/Gated_Transformer-XL)
 
@@ -199,6 +205,11 @@ Please refer to the explanations below to generate certain samples needed for ev
  From the above procedure we can obtain CAS for a certain label (meta) we want to evaluate. If the difference between the accuracy of the 'Fake Model' and 'Real Model' is low, it means our generation model has captured the data distribution w.r.t the certain label well.
  For our experiments on vanila Transformer-XL, Transformer-XL with GE and Transformer-XL with SL, we calculate CAS on all 11 labels. However, some labels such as Number of Measure, Time Signature or Rhythm are usuited for evaluation. Therfore we select BPM, KEY, PITCH RANGE, GENRE and TRACK-ROLE and calculate the Normalized Mean Classification Accuracy Difference Score denoting it as CADS. We obtain CADS as the following. 
  
+ <p align="center">
+<img width="200" alt="GE" src="https://user-images.githubusercontent.com/73946308/226251962-bc3a2ad1-a2fa-4c1c-bd72-d758902c59cd.png">
+</p>
+
+where N is the number of labels(meta) that we think are relevent, in this case 5, and $R_i$ and $F_i$ denotes Real model accuracy for label num i and fake model accuracy for label num i respectively.
 <p align="center">
 <img width="80%" src="https://user-images.githubusercontent.com/73946308/225903685-b8680fe4-4c31-4456-88d0-501cbb1d509a.png"/>
 </p>
