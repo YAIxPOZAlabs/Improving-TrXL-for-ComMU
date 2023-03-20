@@ -141,6 +141,18 @@ To prevent overfitting of the model, techniques such as soft labeling are often 
 </p>
 
 ### Evaluation
+
+#### Test set NLL
+
+|              n-2         | n-1 | n | n+1 | n+2 | test NLL|
+|-----------------------|----|----------|----------|----|-----------|
+| 0 | 0 | 1 | 0 | 0  | 0.96     |
+| 0.1 | 0.1 | 0.6 | 0.1 | 0.1  | 1.01     |
+| 0 | 0.15 | 0.7 | 0.15 | 0  | 1.05     |
+| 0.1 | 0.2 | 0.4 | 0.2 | 0.1  | 1.26     |
+
+
+
 #### Classification Accuracy Score
 |             Lable(Meta)          |  ComMU Validation set | Fake dataset generated with Transformer XL w SL | 
 |-----------------------|----|----------|
