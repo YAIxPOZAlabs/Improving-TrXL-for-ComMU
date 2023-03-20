@@ -25,11 +25,11 @@
 <hr>
 <!-- HEADER END -->
 
-# Improving Transformer-XL for Music Generation
+# Improving Transformer-XL for Music Generation 🎼
 YAI x POZAlabs 산학협력 1팀 <br>
 NLP model for music generation <br>
 
-# Members
+# Members 👋
 <b> <a href="https://github.com/whwjdqls">조정빈</a></b>&nbsp; :&nbsp; YAI 10th&nbsp; /&nbsp;whwjdqls99@yonsei.ac.kr 
 <br>
 <b>  <a href="">김민서</a></b>&nbsp; :&nbsp; YAI 10th&nbsp; /&nbsp; min99830@yonsei.ac.kr  <br>
@@ -41,7 +41,7 @@ NLP model for music generation <br>
 <hr>
 
 
-# Getting Started
+# Getting Started 🔥
 As there are different models and metrics, we recommand using seperate virtual envs for each. 
 As each directory contains it's own "Getting Started", for clear instructions, please follow the links shown in each section.
 ```
@@ -191,7 +191,7 @@ Normalized Mean CASD: *0.0416*
 
 <br>
 
-# Dataset
+# Dataset 🎶
 
 ### ComMU (POZAlabs)
  [ComMU-code](https://github.com/POZAlabs/ComMU-code) has clear instructions on how to download and postprocess ComMU-dataset, but we also provide a postprocessed dataset for simplicity.
@@ -203,7 +203,7 @@ cd ./dataset && ./download.sh && cd ..
 
 <br>
 
-# Metrics
+# Metrics 📋
 To evaluate generation models we have to generate data with trained models and depending on what metrics we want to use, the generation proccess differ. 
 Please refer to the explanations below to generate certain samples needed for evaluation.
 
