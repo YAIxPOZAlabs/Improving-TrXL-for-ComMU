@@ -42,8 +42,16 @@ NLP model for music generation <br>
 
 
 # Getting Started
-As there are different models and metrics, we recommand using seperate virtual envs for each.
+As there are different models and metrics, we recommand using seperate virtual envs for each. 
+As each directory contains it's own "Getting Started", for clear instructions, please follow the links shown in each section.
+```
+Generation/
+├─ CAS/
+├─ Group_Encoding/
+├─ Soft_Labeling/
+├─ TransformerCVAE/
 
+```
 
 # Building on Transformer-XL
 
