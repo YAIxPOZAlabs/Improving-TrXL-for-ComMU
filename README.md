@@ -249,3 +249,14 @@ $ python comput_diversity.py
 
 ## Skills
 Frameworks <br><img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white"/> 
+
+## Citations
+
+```bibtex
+@inproceedings{hyun2022commu,
+  title={Com{MU}: Dataset for Combinatorial Music Generation},
+  author={Lee Hyun and Taehyun Kim and Hyolim Kang and Minjoo Ki and Hyeonchan Hwang and Kwanho Park and Sharang Han and Seon Joo Kim},
+  booktitle={Thirty-sixth Conference on Neural Information Processing Systems Datasets and Benchmarks Track},
+  year={2022},
+}
+```
