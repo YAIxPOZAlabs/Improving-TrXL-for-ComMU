@@ -252,6 +252,7 @@ Frameworks <br><img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-
 
 ## Citations
 
+
 ```bibtex
 @inproceedings{hyun2022commu,
   title={Com{MU}: Dataset for Combinatorial Music Generation},
@@ -260,3 +261,13 @@ Frameworks <br><img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-
   year={2022},
 }
 ```
+
+```bibtex
+@inproceedings{hyun2022commu,
+  title={Classification Accuracy Score for Conditional Generative Models,
+  author={Suman Ravuri and Oriol Vinyals},
+  booktitle={Thirty-second Conference on Neural Information Processing Systems Datasets and Benchmarks Track},
+  year={2019},
+}
+```
+
