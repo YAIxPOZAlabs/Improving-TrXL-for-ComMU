@@ -262,7 +262,30 @@ $ python comput_diversity.py
 Frameworks <br><img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white"/> 
 
 ## Citations
-
+```
+@misc{dai2019transformerxl,
+      title={Transformer-XL: Attentive Language Models Beyond a Fixed-Length Context}, 
+      author={Zihang Dai and Zhilin Yang and Yiming Yang and Jaime Carbonell and Quoc V. Le and Ruslan Salakhutdinov},
+      year={2019},
+      eprint={1901.02860},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG}
+}
+```
+```
+@misc{https://doi.org/10.48550/arxiv.1905.10887,
+  doi = {10.48550/ARXIV.1905.10887},
+  
+  url = {https://arxiv.org/abs/1905.10887},
+  
+  author = {Ravuri, Suman and Vinyals, Oriol},
+  
+  keywords = {Machine Learning (cs.LG), Machine Learning (stat.ML), FOS: Computer and information sciences, FOS: Computer and information sciences},
+  
+  title = {Classification Accuracy Score for Conditional Generative Models},
+  
+  publisher = {arXiv},
+```
 
 ```bibtex
 @inproceedings{hyun2022commu,
