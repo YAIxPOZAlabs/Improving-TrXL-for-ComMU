@@ -262,7 +262,7 @@ $ python comput_diversity.py
 Frameworks <br><img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white"/> 
 
 ## Citations
-```
+```bibtex
 @misc{dai2019transformerxl,
       title={Transformer-XL: Attentive Language Models Beyond a Fixed-Length Context}, 
       author={Zihang Dai and Zhilin Yang and Yiming Yang and Jaime Carbonell and Quoc V. Le and Ruslan Salakhutdinov},
@@ -272,7 +272,7 @@ Frameworks <br><img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-
       primaryClass={cs.LG}
 }
 ```
-```
+```bibtex
 @misc{https://doi.org/10.48550/arxiv.1905.10887,
   doi = {10.48550/ARXIV.1905.10887},
   
