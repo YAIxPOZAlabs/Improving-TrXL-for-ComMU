@@ -194,8 +194,12 @@ Normalized Mean CASD: *0.0416*
 # Dataset
 
 ### ComMU (POZAlabs)
-https://github.com/POZAlabs/ComMU-code
+ [ComMU-code](https://github.com/POZAlabs/ComMU-code) has clear instructions on how to download and postprocess ComMU-dataset, but we also provide a postprocessed dataset for simplicity.
+To download preprocessed and postprocessed data, run
 
+```
+cd ./dataset && ./download.sh && cd ..
+```
 
 <br>
 
