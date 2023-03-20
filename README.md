@@ -225,6 +225,8 @@ Please refer to the explanations below to generate certain samples needed for ev
 </p>
 
 where N is the number of labels(meta) that we think are relevent, in this case 5, and $R_i$ and $F_i$ denotes Real model accuracy for label num i and fake model accuracy for label num i respectively.
+
+The following figure is the overal pipeline of CAS
 <p align="center">
 <img width="80%" src="https://user-images.githubusercontent.com/73946308/225903685-b8680fe4-4c31-4456-88d0-501cbb1d509a.png"/>
 </p>
