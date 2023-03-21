@@ -2,6 +2,7 @@ import numpy as np
 import math
 from scipy import spatial
 from itertools import combinations
+import eval_config
 
 def extract_attr_vector_per_bar(note, attr: str = None):
     # set parameters by attribute
@@ -73,7 +74,7 @@ def get_diversity(notes):
 # LOAD DATA
 # real_npy = np.load("/media/data/dioai/preprocessed_data/paper_data/no_aug/output_npy/target_val.npy", allow_pickle=True)
 # gen_npy = np.load("/media/data/dioai/preprocessed_data/paper_data/no_aug/exp_decoded_obj/200_95/00/generated.npy", allow_pickle=True)
-n_gen = np.load("/workspace/ComMU-Transformer-conditional-VAE/out_val/val.npy", allow_pickle=True)
+n_gen = np.load(eval_config.GENERATED_NPY_DIR, allow_pickle=True)
 np_gen = np.zeros((763, 10, 1012))
 i = 0
 for ii in n_gen:
@@ -110,6 +111,3 @@ n_gen = n_gen[:, :, 12:] # if numpy matrix
 # COMPUTE METRICS
 d = get_diversity(n_gen)
 print(f"diversity: {d}")
-
-
-

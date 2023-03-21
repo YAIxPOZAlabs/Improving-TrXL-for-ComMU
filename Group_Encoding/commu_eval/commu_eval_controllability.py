@@ -4,6 +4,7 @@ import pandas as pd
 import numpy as np
 import functools
 import miditoolkit
+import eval_config
 
 from commu.preprocessor.encoder.event_tokens import base_event, TOKEN_OFFSET
 
@@ -168,13 +169,13 @@ def in_harmony_rate(midifile, chord_progression, key_num):
     return p, n, pn
 
 
-meta_data_path = "/workspace/ComMU-Transformer-conditional-VAE/dataset/val_meta.csv"
+meta_data_path = eval_config.GENERATING_META_DIR
 metas = pd.read_csv(meta_data_path)
 min_vel_arr = metas["min_velocity"]
 max_vel_arr = metas["max_velocity"]
 chord_arr = metas["chord_progressions"]
 
-n_gen = np.load("/workspace/ComMU-Transformer-conditional-VAE/out_val/val.npy", allow_pickle=True)
+n_gen = np.load(eval_config.GENERATED_NPY_DIR, allow_pickle=True)
 np_gen = np.zeros((763, 10, 1012))
 i = 0
 for ii in n_gen:
