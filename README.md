@@ -187,6 +187,13 @@ To prevent overfitting of the model, techniques such as soft labeling are often 
 
 Normalized Mean CASD: *0.0416*
 
+#### Controllability and Diversity
+|                       | CP | CV(Midi) | CV(Note) | CH | Diversity |
+|-----------------------|----|----------|----------|----|-----------|
+| Transformer XL w/o SL | 0.8585	| 0.8060 | 0.9847 | 0.9891 | 0.4100     |
+| Transformer XL w SL   |   0.8807	| 0.8007 | 0.9861	| 0.9891	| 0.4134    |
+
+
 ## 3. Gated Transformer-XL - [Link](https://github.com/YAIxPOZAlabs/Generation/tree/master/Gated_Transformer-XL)
 
 <br>
