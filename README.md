@@ -249,19 +249,23 @@ $ python compute_CAS_all.py --midi_dir {./data.npy} --meta_dir {./meta.npy}
 ```
 
 
-## Diversity
+## Diversity & Controllability
 - To compute the Diversity of Generated Music conditioned with certain meta data
 
-to generate sampels, run
+to generate samples, run
 ```
-$ python generate_diversity.py --checkpoint {./model_checkpoint}
+$ python generate_valid.py --checkpoint_dir {./checkpoint_best.pt} --val_meta_dir {./val_meta.csv} --eval_diversity {True} --out_dir {./out}
 ```
-to compute Diversity, run
-```
-$ python comput_diversity.py 
-```
+First, you should modifty eval_config.py after then,
 
-### Controllability
+to compute Diversity run,
+```
+$ python ./commu_eval/commu_eval_diversity.py
+```
+to compute Controllability,
+```
+$ python ./commu_eval/commu_eval_controllability.py
+```
 
 
 ## Skills
