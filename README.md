@@ -244,7 +244,7 @@ The following figure is the overal pipeline of CAS
 
 to generate samples, run
 ```
-$python generate_CAS.py --checkpoint_dir {./model_checkpoint} --meta_data {./meta_data.csv}
+$python generate_train.py --checkpoint_dir {./model_checkpoint} --meta_data {./train_meta_data.csv} --eval_diversity {False} --out_dir {./train_out}
 ```
 to compute CAS for certain meta data as label, run
 ```
