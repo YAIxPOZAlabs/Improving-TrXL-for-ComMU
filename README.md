@@ -211,9 +211,20 @@ cd ./dataset && ./download.sh && cd ..
 <br>
 
 # Metrics 📋
-To evaluate generation models we have to generate data with trained models and depending on what metrics we want to use, the generation proccess differ. (CAS -> generate training data / controllability&Diversity -> generate validation data)
+To evaluate generation models we have to generate data with trained models and depending on what metrics we want to use, the generation proccess differ. 
 Please refer to the explanations below to generate certain samples needed for evaluation.
 
+## Generating Samples for Evaluation
+for CAS we generat samples based on traing meta data and for Diversity & Controllability we generate samples based on validation meta data 
+
+to generate samples for transformer-XL with GE, run
+```
+$ python generate_GE.py --checkpoint_dir {./checkpoint_best.pt} --meta_dir {./meta.csv} --eval_diversity {True} --out_dir {./out}
+```
+to generate samples for transformer-XL with SL and Baseline, run
+```
+$python generate_SL.py --checkpoint_dir {./model_checkpoint} --meta_data {./meta_data.csv} --eval_diversity {False} --out_dir {./train_out}
+```
 
 ## Classification Accuracy Score - [Link](https://github.com/YAIxPOZAlabs/Generation/tree/master/CAS)
  Evaluating Generative Models is an open problem and for Music generation has not been well defined. Inspired by 'Classification Accuracy Score for Conditional Generative Models' we use CAS as an evaluation metric for out music generation models. THe procedure of our CAS is the following
