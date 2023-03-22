@@ -221,7 +221,8 @@ for transformer-XL with GE, use
 Improving-TrXL-for-ComMU/
 ├─ Group_Encoding/
     ├─ generate_GE.py
-...
+```
+
 for transformer-XL baseline and SL, use
 ```
 Improving-TrXL-for-ComMU/
