@@ -211,7 +211,7 @@ cd ./dataset && ./download.sh && cd ..
 <br>
 
 # Metrics 📋
-To evaluate generation models we have to generate data with trained models and depending on what metrics we want to use, the generation proccess differ. 
+To evaluate generation models we have to generate data with trained models and depending on what metrics we want to use, the generation proccess differ. (CAS -> generate training data / controllability&Diversity -> generate validation data)
 Please refer to the explanations below to generate certain samples needed for evaluation.
 
 
