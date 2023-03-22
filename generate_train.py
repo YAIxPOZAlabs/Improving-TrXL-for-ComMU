@@ -40,7 +40,7 @@ def main(checkpoint_path, meta_data_path, eval_diversity=False, out_dir = './out
 
         input_['rhythm'] = 'standard'
         input_['output_dir'] = out_dir + '/' + str(idx)
-        # input_['num_generate'] = 10 if eval_diversity else 1
+        input_['num_generate'] = 10 if eval_diversity else 1 
         input_['num_generate'] = 1
         input_['top_k'] = 32
         input_['temperature'] = 0.95
@@ -73,10 +73,10 @@ if __name__ == "__main__":
     arg_parser = argparse.ArgumentParser()
 
     arg_parser.add_argument("--checkpoint_dir", type=str)
-    arg_parser.add_argument("--val_meta_dir", type=str)
-    arg_parser.add_argument("--eval_diversity", type=bool)
+    arg_parser.add_argument("--meta_dir", type=str)
+    arg_parser.add_argument("--eval_diversity", type=bool) 
     arg_parser.add_argument("--out_dir", type=str)
 
     args = arg_parser.parse_args()
 
-    main(args.checkpoint_dir, args.val_meta_dir, args.eval_diversity, args.out_dir)
+    main(args.checkpoint_dir, args.meta_dir, args.eval_diversity, args.out_dir)
