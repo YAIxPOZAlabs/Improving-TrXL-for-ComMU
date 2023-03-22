@@ -259,9 +259,14 @@ The following figure is the overal pipeline of CAS
 
 - To compute Classicication Accuracy Score of Generated Music conditioned with certain meta data 
 
-to generate samples, run
+to generate samples
+for SL and baseline, run
 ```
-$python generate_SL.py --checkpoint_dir {./model_checkpoint} --meta_data {./train_meta_data.csv} --eval_diversity {False} --out_dir {./train_out}
+$ python generate_SL.py --checkpoint_dir {./model_checkpoint} --meta_data {./train_meta_data.csv} --eval_diversity {False} --out_dir {./train_out}
+```
+for GE, run 
+```
+$ python generate_GE.py --checkpoint_dir {./checkpoint_best.pt} --meta_data {./train_meta_data.csv} --eval_diversity {False} --out_dir {./train_out}
 ```
 to compute CAS for certain meta data as label, run
 ```
@@ -276,10 +281,16 @@ $ python evaluate_resnet_all.py --midi_dir {./data.npy} --meta_dir {./meta.npy}
 ## Diversity & Controllability
 - To compute the Diversity of Generated Music conditioned with certain meta data
 
-to generate samples, run
+to generate samples
+for SL and baseline, run
 ```
-$ python generate_GE.py --checkpoint_dir {./checkpoint_best.pt} --val_meta_dir {./val_meta.csv} --eval_diversity {True} --out_dir {./out}
+$ python generate_SL.py --checkpoint_dir {./model_checkpoint} --meta_data {./val_meta_data.csv} --eval_diversity {True} --out_dir {./val_out}
 ```
+for GE, run 
+```
+$ python generate_GE.py --checkpoint_dir {./checkpoint_best.pt} --meta_data {./val_meta_data.csv} --eval_diversity {True} --out_dir {./val_out}
+```
+
 First, you should modifty eval_config.py after then,
 
 to compute Diversity run,
