@@ -45,7 +45,7 @@ NLP model for music generation <br>
 As there are different models and metrics, we recommand using seperate virtual envs for each. 
 As each directory contains it's own "Getting Started", for clear instructions, please follow the links shown in each section.
 ```
-Generation/
+Improving-TrXL-for-ComMU/
 ├─ CAS/
 ├─ Group_Encoding/
 ├─ Soft_Labeling/
@@ -218,13 +218,13 @@ Please refer to the explanations below to generate certain samples needed for ev
 for CAS we generat samples based on traing meta data and for Diversity & Controllability we generate samples based on validation meta data 
 for transformer-XL with GE, use
 ```
-Generation/
+Improving-TrXL-for-ComMU/
 ├─ Group_Encoding/
     ├─ generate_GE.py
 ...
 for transformer-XL baseline and SL, use
 ```
-Generation/
+Improving-TrXL-for-ComMU/
 ├─ generate_SL.py
 ```
 
