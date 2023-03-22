@@ -248,11 +248,11 @@ $python generate_CAS.py --checkpoint_dir {./model_checkpoint} --meta_data {./met
 ```
 to compute CAS for certain meta data as label, run
 ```
-$ python compute_CAS.py --midi_dir {./data.npy} --meta_dir {./meta.npy} --meta_num {meta_num}
+$ python evaluate_resnet.py --midi_dir {./data.npy} --meta_dir {./meta.npy} --meta_num {meta_num}
 ```
 to compute CAS for all meta data as label, run
 ```
-$ python compute_CAS_all.py --midi_dir {./data.npy} --meta_dir {./meta.npy}
+$ python evaluate_resnet_all.py --midi_dir {./data.npy} --meta_dir {./meta.npy}
 ```
 
 
