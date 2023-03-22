@@ -228,7 +228,7 @@ for transformer-XL baseline and SL, use
 Improving-TrXL-for-ComMU/
 ├─ generate_SL.py
 ```
-note that `generate_SL.py` should be placed inside [ComMU-code](https://github.com/POZAlabs/ComMU-code) as for SL does change the model structure or inference mechanism. 
+note that `generate_SL.py` should be placed inside [ComMU-code](https://github.com/POZAlabs/ComMU-code) as for SL does not change the model structure or inference mechanism. 
 
 ## Classification Accuracy Score - [Link](https://github.com/YAIxPOZAlabs/Generation/tree/master/CAS)
  Evaluating Generative Models is an open problem and for Music generation has not been well defined. Inspired by 'Classification Accuracy Score for Conditional Generative Models' we use CAS as an evaluation metric for out music generation models. THe procedure of our CAS is the following
