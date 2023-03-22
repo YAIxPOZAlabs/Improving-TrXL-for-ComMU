@@ -215,7 +215,9 @@ To evaluate generation models we have to generate data with trained models and d
 Please refer to the explanations below to generate certain samples needed for evaluation.
 
 ## Generating Samples for Evaluation
-for CAS we generat samples based on traing meta data and for Diversity & Controllability we generate samples based on validation meta data 
+for CAS we generate samples based on traing meta data and for Diversity & Controllability we generate samples based on validation meta data.
+
+
 for transformer-XL with GE, use
 ```
 Improving-TrXL-for-ComMU/
