@@ -74,10 +74,10 @@ if __name__ == "__main__":
     arg_parser = argparse.ArgumentParser()
 
     arg_parser.add_argument("--checkpoint_dir", type=str)
-    arg_parser.add_argument("--val_meta_dir", type=str)
+    arg_parser.add_argument("--meta_dir", type=str)
     arg_parser.add_argument("--eval_diversity", type=bool)
     arg_parser.add_argument("--out_dir", type=str)
 
     args = arg_parser.parse_args()
 
-    main(args.checkpoint_dir, args.val_meta_dir, args.eval_diversity, args.out_dir)
+    main(args.checkpoint_dir, args.meta_dir, args.eval_diversity, args.out_dir)
