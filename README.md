@@ -14,10 +14,10 @@
 <a href="mailto:dhakim@yonsei.ac.kr">
     <img src="https://img.shields.io/badge/-Gmail-D14836?style=flat-square&logo=gmail&logoColor=white" alt="Gmail"/>
 </a>
-<a href="https://binne.notion.site/YAIXPOZALabs-1-e679cf3cf3854ef69bfabc5a377cbea2">
+<a href="[https://binne.notion.site/YAIXPOZALabs-1-e679cf3cf3854ef69bfabc5a377cbea2](https://www.notion.so/binne/YAI-X-POZAlabs-852ef538af984d99abee33037751547c)">
     <img src="https://img.shields.io/badge/-Project%20Page-000000?style=flat-square&logo=notion&logoColor=white" alt="NOTION"/>
 </a>
-<a href="#">
+<a href="https://binne.notion.site/YAIXPOZALabs-1-e679cf3cf3854ef69bfabc5a377cbea2">
     <img src="https://img.shields.io/badge/-Full%20Report-dddddd?style=flat-square&logo=latex&logoColor=black" alt="REPORT"/>
 </a>
 </p>
@@ -30,13 +30,13 @@ YAI x POZAlabs 산학협력 1팀 <br>
 NLP model for music generation <br>
 
 # Members 👋
-<b> <a href="https://github.com/whwjdqls">조정빈</a></b>&nbsp; :&nbsp; YAI 10th&nbsp; /&nbsp;whwjdqls99@yonsei.ac.kr 
+<b> <a href="https://github.com/whwjdqls">조정빈</a></b>&nbsp; :&nbsp; YAI 9th&nbsp; /&nbsp;whwjdqls99@yonsei.ac.kr 
 <br>
-<b>  <a href="">김민서</a></b>&nbsp; :&nbsp; YAI 10th&nbsp; /&nbsp; min99830@yonsei.ac.kr  <br>
+<b>  <a href="">김민서</a></b>&nbsp; :&nbsp; YAI 8th&nbsp; /&nbsp; min99830@yonsei.ac.kr  <br>
 <b> <a href="https://github.com/mounKim">김산</a></b>&nbsp; :&nbsp; YAI 9th&nbsp; /&nbsp; nasmik419@yonsei.ac.kr <br>
-<b> <a href="https://github.com/Tim3s">김성준</a></b>&nbsp; :&nbsp; YAI 9th&nbsp; /&nbsp;sjking0825@gmail.com <br>
-<b> <a href="</br>https://github.com/0601p">박민수</a></b>&nbsp; :&nbsp; YAI 10th&nbsp; /&nbsp;0601p@naver.com  <br>
-<b><a href="https://github.com/starwh03">박수빈</a></b>&nbsp; :&nbsp; YAI 10th&nbsp; /&nbsp;sallyna602@yonsei.ac.kr <br>
+<b> <a href="https://github.com/Tim3s">김성준</a></b>&nbsp; :&nbsp; YAI 10th&nbsp; /&nbsp;sjking0825@gmail.com <br>
+<b> <a href="</br>https://github.com/0601p">박민수</a></b>&nbsp; :&nbsp; YAI 9th&nbsp; /&nbsp;0601p@naver.com  <br>
+<b><a href="https://github.com/starwh03">박수빈</a></b>&nbsp; :&nbsp; YAI 9th&nbsp; /&nbsp;sallyna602@yonsei.ac.kr <br>
 <br><br>
 <hr>
 
