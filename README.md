@@ -216,14 +216,16 @@ Please refer to the explanations below to generate certain samples needed for ev
 
 ## Generating Samples for Evaluation
 for CAS we generat samples based on traing meta data and for Diversity & Controllability we generate samples based on validation meta data 
-
-to generate samples for transformer-XL with GE, run
+for transformer-XL with GE, use
 ```
-$ python generate_GE.py --checkpoint_dir {./checkpoint_best.pt} --meta_dir {./meta.csv} --eval_diversity {True} --out_dir {./out}
+Generation/
+├─ Group_Encoding/
+    ├─ generate_GE.py
+...
+for transformer-XL baseline and SL, use
 ```
-to generate samples for transformer-XL with SL and Baseline, run
-```
-$python generate_SL.py --checkpoint_dir {./model_checkpoint} --meta_data {./meta_data.csv} --eval_diversity {False} --out_dir {./train_out}
+Generation/
+├─ generate_SL.py
 ```
 
 ## Classification Accuracy Score - [Link](https://github.com/YAIxPOZAlabs/Generation/tree/master/CAS)
@@ -255,7 +257,7 @@ The following figure is the overal pipeline of CAS
 
 to generate samples, run
 ```
-$python generate_train.py --checkpoint_dir {./model_checkpoint} --meta_data {./train_meta_data.csv} --eval_diversity {False} --out_dir {./train_out}
+$python generate_SL.py --checkpoint_dir {./model_checkpoint} --meta_data {./train_meta_data.csv} --eval_diversity {False} --out_dir {./train_out}
 ```
 to compute CAS for certain meta data as label, run
 ```
@@ -272,7 +274,7 @@ $ python evaluate_resnet_all.py --midi_dir {./data.npy} --meta_dir {./meta.npy}
 
 to generate samples, run
 ```
-$ python generate_valid.py --checkpoint_dir {./checkpoint_best.pt} --val_meta_dir {./val_meta.csv} --eval_diversity {True} --out_dir {./out}
+$ python generate_GE.py --checkpoint_dir {./checkpoint_best.pt} --val_meta_dir {./val_meta.csv} --eval_diversity {True} --out_dir {./out}
 ```
 First, you should modifty eval_config.py after then,
 
