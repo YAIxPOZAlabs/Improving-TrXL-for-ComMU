@@ -11,7 +11,7 @@
 
 <p align="center">
 <br>
-<a href="mailto:dhakim@yonsei.ac.kr">
+<a href="mailto:@yonsei.ac.kr">
     <img src="https://img.shields.io/badge/-Gmail-D14836?style=flat-square&logo=gmail&logoColor=white" alt="Gmail"/>
 </a>
 <a href="[https://binne.notion.site/YAIXPOZALabs-1-e679cf3cf3854ef69bfabc5a377cbea2](https://www.notion.so/binne/YAI-X-POZAlabs-852ef538af984d99abee33037751547c)">
